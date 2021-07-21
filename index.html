@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mine-sweeper.css">
+    <title>Mine Sweeper</title>
+</head>
+<body onload="init()">
+    <div class="sec-display"></div>
+    <div class="shown-display"></div>
+    <div>
+        <button class="start-button" onclick="init()"></button>
+    </div>
+    <div>
+        <button onclick="setLevel(0)">16</button>
+        <button onclick="setLevel(1)">64</button>
+        <button onclick="setLevel(2)">144</button>
+    </div>
+    <table>
+        <tbody class="board">
+
+        </tbody>
+    </table>
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/mine-sweeper.js"></script>
+</body>
+</html>
