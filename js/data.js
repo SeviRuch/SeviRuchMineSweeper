@@ -1,5 +1,15 @@
 'use strict';
 
+const MINE = '💣'
+const MARK = '🚩'
+const EMPTY = ''
+
+const SAD_FACE = '😒';
+const HAPPY_FACE = '😁';
+const WIN_FACE = '😎';
+
+const LIVES = 3;
+
 var gGame = {
     isOn: false,
     isFirstGuess: true,
@@ -7,6 +17,8 @@ var gGame = {
     markedCount: 0,
     timerInterval: 0,
     secsPassed: 0,
+    safeClicks: 3,
+    lives: LIVES,
 };
 var gLevels = [
     {SIZE: 4, MINES: 2},
@@ -15,11 +27,3 @@ var gLevels = [
 ];
 var gLevel = gLevels[1];
 var gBoard = [];
-
-const MINE = '💣'
-const MARK = '🚩'
-const EMPTY = ''
-
-const SAD_FACE = '😧';
-const HAPPY_FACE = '🙂';
-const WIN_FACE = '😎';

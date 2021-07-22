@@ -1,29 +1,88 @@
-.board{
-    background-color:darkgray;
+body {
+  background-color: rgb(226, 200, 178);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-table{
-    margin:auto;
-    margin-top: 100px;
+h1 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 400;
+}
+h2 {
+  text-align: center;
+  font-size: 40px;
+  font-family: "Trebuchet MS";
+  font-weight: 300;
+  background-color: rgb(236, 8, 8);
+}
+.board {
+  background-color: darkgray;
+}
+table {
+  margin: auto;
+  margin-top: 20px;
+}
+.safe-cell {
+  background-color: rgb(226, 200, 178);
 }
 .cell {width:40px; height:40px;text-align: center}
 .cell img {width:25px; height:auto}
-td{
-    border: darkslateblue;
-    border-style: solid;
-    border-width: 2px;
-    width: 40px; 
-    height:40px;
+td {
+  border: darkslateblue;
+  border-style: solid;
+  border-width: 2px;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  font-weight: bolder;
+}
+td:hover {
+  background-color: #fff;
+}
+.td-shown{
+    background-color:slategrey;
+}
+.incorrectly-marked{
+    background-color:darkorange;
+}
+.stat-display {
+  color: black;
+  background-color: darkgray;
+  font-size: xx-large;
+  font-family: sans-serif;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: black;
+  border-style: solid;
+}
+.exploded {
+  background-color: red;
+}
+.top-div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.start-button {
+  height: 60px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 80px;
+  display: inline-block;
+  margin: auto;
+  margin-bottom: 30px;
+  background-color: rgb(226, 200, 178);
+  border-style: none;
+}
+.status-line {
+    width: 200 px;
+    margin: auto;
     text-align: center;
+    margin-top: 12px;
 }
-.sec-display{
-    margin:auto;
-    color: black;
-    font-size:xx-large;
-    font-family: sans-serif;
-}
-.exploded{
-    background-color: red;
-}
-.start-buton{
-    height: 40px;
-}
+.btn-line {
+    width: 200 px;
+    margin: auto;
+    text-align: center;
+    margin-top: 12px;
+  }
+  

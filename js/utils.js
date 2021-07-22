@@ -1,8 +1,5 @@
 'use strict';
 
-function isFirstGuess(){
-    return gGame.shownCount === 0;
-}
 function getCellId(i, j){
     return `#cell-${i}-${j}`;
 }
@@ -12,14 +9,22 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
 }
 function updateTime(){
-    var elSecDisplay = document.querySelector('.sec-display');
+    var elSecDisplay = document.querySelector('.seconds');
     elSecDisplay.innerHTML = gGame.secsPassed++;
 }
 function updateShown(){
-    var elSecDisplay = document.querySelector('.shown-display');
-    elSecDisplay.innerHTML = gGame.shownCount;
+    var elSecDisplay = document.querySelector('.shown');
+    elSecDisplay.innerHTML = gGame.shownCount - (LIVES - gGame.lives);
+}
+function updateLives(){
+    var elLivesDisplay = document.querySelector('.lives');
+    elLivesDisplay.innerHTML = gGame.lives;
 }
 function setFace(face){
     var startBtn = document.querySelector('.start-button');
     startBtn.innerHTML = face;
+}
+function setLevel(level) {
+    gLevel = gLevels[level];
+    init();
 }

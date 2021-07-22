@@ -8,23 +8,32 @@
     <title>Mine Sweeper</title>
 </head>
 <body onload="init()">
-    <div class="sec-display"></div>
-    <div class="shown-display"></div>
-    <div>
+    <h1>💣   Mine Sweeper  💣</h1>
+    <div class="top-div">
         <button class="start-button" onclick="init()"></button>
-    </div>
-    <div>
-        <button onclick="setLevel(0)">16</button>
-        <button onclick="setLevel(1)">64</button>
-        <button onclick="setLevel(2)">144</button>
+        <div class="status-line">
+            <span class="seconds stat-display"></span>
+            <span class="shown stat-display"></span>
+            <span class="lives stat-display"></span>
+        </div>
+        <div class="btn-line">
+            <button onclick="setLevel(0)">4x4</button>
+            <button onclick="setLevel(1)">8x8</button>
+            <button onclick="setLevel(2)">12x12</button>
+            <button class="safe-click-btn" onclick="safeClick()">safeClick</button>
+            <!-- <button class="undo-btn" onclick="undo()">undo</button> -->
+        </div>
     </div>
     <table>
         <tbody class="board">
 
         </tbody>
     </table>
+    <div><h2>Sevi Rutz</h2></div>
     <script src="js/data.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/mine-sweeper.js"></script>
+    <script src="js/safe-click.js"></script>
+    <script src="js/undo.js"></script>
 </body>
 </html>
